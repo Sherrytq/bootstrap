@@ -1,158 +1,79 @@
-<p align="center">
-  <a href="https://v4-alpha.getbootstrap.com">
-    <img src="http://v4-alpha.getbootstrap.com/assets/brand/bootstrap-solid.svg" width=72 height=72>
-  </a>
+README
+===========================
+该文件用来说明新版股吧文件frontend的相关内容
 
-  <h3 align="center">Bootstrap</h3>
-
-  <p align="center">
-    Sleek, intuitive, and powerful front-end framework for faster and easier web development.
-    <br>
-    <a href="https://v4-alpha.getbootstrap.com"><strong>Explore Bootstrap docs &raquo;</strong></a>
-    <br>
-    <br>
-    <a href="https://themes.getbootstrap.com">Bootstrap Themes</a>
-    &middot;
-    <a href="https://jobs.getbootstrap.com">Job Board</a>
-    &middot;
-    <a href="https://blog.getbootstrap.com">Blog</a>
-  </p>
-</p>
-
-<br>
-
-## Table of contents
-
-- [Quick start](#quick-start)
-- [Status](#status)
-- [What's included](#whats-included)
-- [Bugs and feature requests](#bugs-and-feature-requests)
-- [Documentation](#documentation)
-- [Contributing](#contributing)
-- [Community](#community)
-- [Versioning](#versioning)
-- [Creators](#creators)
-- [Copyright and license](#copyright-and-license)
-
-## Quick start
-
-Several quick start options are available:
-
-- [Download the latest release.](https://github.com/twbs/bootstrap/archive/v4.0.0-alpha.6.zip)
-- Clone the repo: `git clone https://github.com/twbs/bootstrap.git`
-- Install with [npm](https://www.npmjs.com): `npm install bootstrap@4.0.0-alpha.6`
-- Install with [yarn](https://github.com/yarnpkg/yarn): `yarn add bootstrap@4.0.0-alpha.6`
-- Install with [Composer](https://getcomposer.org): `composer require twbs/bootstrap:4.0.0-alpha.6`
-- Install with [Bower](https://bower.io): `bower install bootstrap#v4.0.0-alpha.6`
-- Install with [NuGet](https://www.nuget.org): CSS: `Install-Package bootstrap -Pre` Sass: `Install-Package bootstrap.sass -Pre` (`-Pre` is only required until Bootstrap v4 has a stable release).
-
-Read the [Getting started page](https://getbootstrap.com/getting-started/) for information on the framework contents, templates and examples, and more.
-
-## Status
-
-[![Slack](https://bootstrap-slack.herokuapp.com/badge.svg)](https://bootstrap-slack.herokuapp.com)
-[![Bower](https://img.shields.io/bower/v/bootstrap.svg)](https://bower.io/search/?q=bootstrap)
-[![npm version](https://img.shields.io/npm/v/bootstrap.svg)](https://www.npmjs.com/package/bootstrap)
-[![Gem version](https://img.shields.io/gem/v/bootstrap.svg)](https://rubygems.org/gems/bootstrap)
-[![Build Status](https://img.shields.io/travis/twbs/bootstrap/v4-dev.svg)](https://travis-ci.org/twbs/bootstrap)
-[![devDependency Status](https://img.shields.io/david/dev/twbs/bootstrap.svg)](https://david-dm.org/twbs/bootstrap?type=dev)
-[![Meteor Atmosphere](https://img.shields.io/badge/meteor-twbs%3Abootstrap-blue.svg)](https://atmospherejs.com/twbs/bootstrap)
-[![Packagist Prerelease](https://img.shields.io/packagist/vpre/twbs/bootstrap.svg)](https://packagist.org/packages/twbs/bootstrap)
-[![NuGet](https://img.shields.io/nuget/vpre/bootstrap.svg)](https://www.nuget.org/packages/bootstrap/absoluteLatest)
-
-[![Selenium Test Status](https://saucelabs.com/browser-matrix/bootstrap.svg)](https://saucelabs.com/u/bootstrap)
-
-## What's included
-
-Within the download you'll find the following directories and files, logically grouping common assets and providing both compiled and minified variations. You'll see something like this:
-
-```
-bootstrap/
-├── css/
-│   ├── bootstrap.css
-│   ├── bootstrap.css.map
-│   ├── bootstrap.min.css
-│   └── bootstrap.min.css.map
-└── js/
-    ├── bootstrap.js
-    └── bootstrap.min.js
-```
-
-We provide compiled CSS and JS (`bootstrap.*`), as well as compiled and minified CSS and JS (`bootstrap.min.*`). CSS [source maps](https://developers.google.com/web/tools/chrome-devtools/debug/readability/source-maps) (`bootstrap.*.map`) are available for use with certain browsers' developer tools.
+****
+	
+|Author|ztq|
+|---|---
+|E-mail| tianqi1@eastmoney.com
 
 
-## Bugs and feature requests
+# 主文件在page中，包括list.html 和 list.js 部分
+    list.html 为显示页面，测试页面要再list_2017.aspx进行修改，并提交到堡垒机中
+    list.js  为主页面的逻辑部分。
+    
+# 界面的每个部分分成模块，分布在文件夹module中
 
-Have a bug or a feature request? Please first read the [issue guidelines](https://github.com/twbs/bootstrap/blob/master/CONTRIBUTING.md#using-the-issue-tracker) and search for existing and closed issues. If your problem or idea is not addressed yet, [please open a new issue](https://github.com/twbs/bootstrap/issues/new).
+## body文件中包括 正文的表单  
+     listHeader : 为内容页面的头部部分；
+     listFooter: 为内容页面的尾部，主要是页码部分逻辑；
+     publishnew: 发表新主题的整个界面样式，以及问董秘部分逻辑；
+     editor ：发表新主题的编辑器，基于百度umeditor；
 
+## footer文件为整个页面的底部模块 
 
-## Documentation
+## header文件为整个页面的头部模块
 
-Bootstrap's documentation, included in this repo in the root directory, is built with [Jekyll](https://jekyllrb.com) and publicly hosted on GitHub Pages at <https://getbootstrap.com>. The docs may also be run locally.
+## right文件为整个页面的右部模块
+     ad: 广告模块
+     belongs: 所属概念模块
+     bkdata: 所属行业涨跌幅模块
+     dapan: 大盘模块
+     hottopic: 热门话题模块
+     newstockinfo: 新股后边行情模块
+     reportTab: 公告模块
+     rightZaiKan: 大家都在看模块
+     searchInfo: 查行情 查资金流 搜索模块
+     somegbtab: 沪深右边的行情模块
 
-Documentation search is powered by [Algolia's DocSearch](https://community.algolia.com/docsearch/). Working on our search? Be sure to set `debug: true` in the `_scripts.html` include.
+## top文件为整个内容模块的顶部模块      
+      gbsearch：顶部的搜索模块
+      history: 历史浏览记录模块
+      location: 当前股吧的路径模块
+      scrollheader: 顶部悬浮模块
+      somegbmaininfo: 当前股吧的主要信息，包括特色数据，f10档案等
+      somegbinfoheaderOne: 当前股吧的吧名，帖子数和相关话题
+    
+## common 文件中包括弹出框      
+      hint: error 等提醒模块的弹出框通用模板
+      modal：登录框和验证码模块的较大的弹出框通用模块
+      shiming: 实名制弹出框模块
+      tooltipster: jquery 的tooltipster的插件，用于悬浮弹出框
+      vcode: 验证码模块逻辑
 
-### Running documentation locally
+## hepler 文件为通用的逻辑模块      
+      helper.js: 所有hepler文件的汇总
+      ajax_upload.js: 用于为editor服务，用于上传图片，上传视频等功能
+      cookie.js: cookie 的简单获取和操作
+      errorCode.js: 验证器(目前还没有用到）
+      follow.js: 关注和取消关注 股票和人 的逻辑
+      influence.js: 用户影响力逻辑
+      jsplugin.js: 用于实现背景的闪烁
+      net.js: ajax, jsonp 等请求的封装
+      observe.js: 观察者模式，目前用于editor.js 中
+      popmsg.js: 悬浮框界面及相关逻辑
+      stock.js: 判断当前的股票类型
+      storage.js: 判断是否在localstorage 还是在 cookie 中，并进行处理
+      text.js: 对文本进行相应的处理
+      time.js: 时间字符串处理 其中 parseISO8601 为了兼容性ie7
+      url.js: 对url 进行处理（目前还没有用到）
+      user.js: 获取用户信息
+      validator.js: 验证器(目前还没有用到)
 
-1. Run through the [tooling setup](https://github.com/twbs/bootstrap/blob/v4-dev/docs/4.0/getting-started/build-tools.md#tooling-setup) to install Jekyll (the site builder) and other Ruby dependencies with `bundle install`.
-2. Run `npm run test` (or a specific NPM script) to rebuild distributed CSS and JavaScript files, as well as our docs assets.
-3. From the root `/bootstrap` directory, run `bundle exec jekyll serve` in the command line.
-4. Open <http://localhost:9001> in your browser, and voilà.
-
-Learn more about using Jekyll by reading its [documentation](https://jekyllrb.com/docs/home/).
-
-### Documentation for previous releases
-
-Documentation for v2.3.2 has been made available for the time being at <https://getbootstrap.com/2.3.2/> while folks transition to Bootstrap 3.
-
-[Previous releases](https://github.com/twbs/bootstrap/releases) and their documentation are also available for download.
-
-
-
-## Contributing
-
-Please read through our [contributing guidelines](https://github.com/twbs/bootstrap/blob/master/CONTRIBUTING.md). Included are directions for opening issues, coding standards, and notes on development.
-
-Moreover, if your pull request contains JavaScript patches or features, you must include [relevant unit tests](https://github.com/twbs/bootstrap/tree/master/js/tests). All HTML and CSS should conform to the [Code Guide](https://github.com/mdo/code-guide), maintained by [Mark Otto](https://github.com/mdo).
-
-Editor preferences are available in the [editor config](https://github.com/twbs/bootstrap/blob/master/.editorconfig) for easy use in common text editors. Read more and download plugins at <http://editorconfig.org>.
-
-
-
-## Community
-
-Get updates on Bootstrap's development and chat with the project maintainers and community members.
-
-- Follow [@getbootstrap on Twitter](https://twitter.com/getbootstrap).
-- Read and subscribe to [The Official Bootstrap Blog](https://blog.getbootstrap.com).
-- Join [the official Slack room](https://bootstrap-slack.herokuapp.com).
-- Chat with fellow Bootstrappers in IRC. On the `irc.freenode.net` server, in the `##bootstrap` channel.
-- Implementation help may be found at Stack Overflow (tagged [`bootstrap-4`](https://stackoverflow.com/questions/tagged/bootstrap-4)).
-- Developers should use the keyword `bootstrap` on packages which modify or add to the functionality of Bootstrap when distributing through [npm](https://www.npmjs.com/browse/keyword/bootstrap) or similar delivery mechanisms for maximum discoverability.
-
-
-
-## Versioning
-
-For transparency into our release cycle and in striving to maintain backward compatibility, Bootstrap is maintained under [the Semantic Versioning guidelines](http://semver.org/). Sometimes we screw up, but we'll adhere to those rules whenever possible.
-
-See [the Releases section of our GitHub project](https://github.com/twbs/bootstrap/releases) for changelogs for each release version of Bootstrap. Release announcement posts on [the official Bootstrap blog](https://blog.getbootstrap.com) contain summaries of the most noteworthy changes made in each release.
-
-
-## Creators
-
-**Mark Otto**
-
-- <https://twitter.com/mdo>
-- <https://github.com/mdo>
-
-**Jacob Thornton**
-
-- <https://twitter.com/fat>
-- <https://github.com/fat>
+# 运行代码
+      latte debug 运行代码，进行本地测试
+      latte release 运行代码，将release文件中的list.js， img文件和list.css 传入堡垒机
+      latte sprite 获取图片精灵 图片在sprite 文件夹中，生成的代码在sprite_common.css 文件中 
 
 
-
-## Copyright and license
-
-Code and documentation copyright 2011-2017 the [Bootstrap Authors](https://github.com/twbs/bootstrap/graphs/contributors) and [Twitter, Inc.](https://twitter.com) Code released under the [MIT License](https://github.com/twbs/bootstrap/blob/master/LICENSE). Docs released under [Creative Commons](https://github.com/twbs/bootstrap/blob/master/docs/LICENSE).
